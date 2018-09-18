@@ -9,7 +9,7 @@ if "%a%"=="五" set a=5
 if "%a%"=="六" set a=-1
 if "%a%"=="日" set a=-2
 set /a DaysAgo=%a%-5
-call :DateTodays %date:~0,4% %date:~5,2% %date:~8,2% PassDays
+call :DateToDays %date:~0,4% %date:~5,2% %date:~8,2% PassDays
 set /a PassDays-=%DaysAgo%
 call :DaysToDate %PassDays% DstYear DstMonth DstDay
 set YYYYmmdd=%DstYear%%DstMonth%%DstDay%
@@ -25,7 +25,7 @@ goto :eof
 
 
 
-:DateTodays %yy%%mm%%dd% days
+:DateToDays %yy%%mm%%dd% days
 setlocal ENABLEEXTENSIONS
 set yy=%1&set mm=%2&set dd=%3
 if 1%yy% LSS 200 if 1%yy% LSS 170 (set yy=20%yy%) else (set yy=19%yy%)
