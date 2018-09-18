@@ -1,23 +1,23 @@
 @echo off
 cd /d D:\Doc
 set a=%date:~12,1%
-if "%a%"=="Ò»" set a=1
-if "%a%"=="¶þ" set a=2
-if "%a%"=="Èý" set a=3
-if "%a%"=="ËÄ" set a=4
-if "%a%"=="Îå" set a=5
-if "%a%"=="Áù" set a=-1
-if "%a%"=="ÈÕ" set a=-2
+if "%a%"=="ä¸€" set a=1
+if "%a%"=="äºŒ" set a=2
+if "%a%"=="ä¸‰" set a=3
+if "%a%"=="å››" set a=4
+if "%a%"=="äº”" set a=5
+if "%a%"=="å…­" set a=-1
+if "%a%"=="æ—¥" set a=-2
 set /a DaysAgo=%a%-5
-call :Datetodays %date:~0,4% %date:~5,2% %date:~8,2% PassDays
+call :DateTodays %date:~0,4% %date:~5,2% %date:~8,2% PassDays
 set /a PassDays-=%DaysAgo%
-call :Daystodate %Passdays% DstYear DstMonth DstDay
+call :DaysToDate %PassDays% DstYear DstMonth DstDay
 set YYYYmmdd=%DstYear%%DstMonth%%DstDay%
 if not exist %YYYYmmdd%.txt (
-  echo #¿ªÊ¼Ð´ÖÜ±¨# > %YYYYmmdd%.txt
-  msg %username% /TIME:5 ÖÜÄ©ÂíÉÏÒª¿ªÊ¼À²£¬¸Ï½ôÐ´¸öÖÜ±¨°É!
+  echo #å¼€å§‹å†™å‘¨æŠ¥# > %YYYYmmdd%.txt
+  msg %username% /TIME:5 å‘¨æœ«é©¬ä¸Šè¦å¼€å§‹å•¦ï¼Œèµ¶ç´§å†™ä¸ªå‘¨æŠ¥å§!
 ) else (
-  msg %username% /TIME:5 ÖÜÄ©ÂíÉÏÒª¿ªÊ¼À²£¬¸Ï½ô¼ì²éÏÂÖÜ±¨°É£¡
+  msg %username% /TIME:5 å‘¨æœ«é©¬ä¸Šè¦å¼€å§‹å•¦ï¼Œèµ¶ç´§æ£€æŸ¥ä¸‹å‘¨æŠ¥å§ï¼
 )
 ping localhost -n 3 -w 1000 > nul
 start notepad %YYYYmmdd%.txt
