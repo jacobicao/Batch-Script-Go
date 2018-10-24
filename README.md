@@ -9,4 +9,4 @@ In fact, usually, it is set into the task scheduler to run every friday afternoo
 This python script will read a text file and then transform to Quick Response Code(qr code), 
 which is convinience for extracting middle text file from networkless and usbless device. 
 How to use it?
-'$ python text2qrcode.py abc.c
+> $ python text2qrcode.py abc.c
