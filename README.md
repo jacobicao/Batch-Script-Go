@@ -13,3 +13,6 @@ How to use it?
 
 or add compress command:
 > python text2qrcode.py text2qrcode.py --compress
+
+## make_album.py
+This python script will assamble all txt file in the folder and then print them into one txt file which is named album.txt.
