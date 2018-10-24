@@ -10,5 +10,6 @@ This python script will read a text file and then transform to Quick Response Co
 which is convinience for extracting middle text file from networkless and usbless device. 
 How to use it?
 > python text2qrcode.py text2qrcode.py
+
 or add compress command:
 > python text2qrcode.py text2qrcode.py --compress
